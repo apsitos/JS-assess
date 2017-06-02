@@ -9,6 +9,8 @@ skills.
 ## Version on this repo
 Cloned from R Murphey, pushed to this repo ONLY to keep track of my own work. Please do not clone this repo or fork, please see the origin repo linked in description.
 
+Answers [here](https://github.com/rmurphey/js-assessment-answers)
+
 # License
 
 Copyright &copy; 2012-2016 Rebecca Murphey with many thanks to several
