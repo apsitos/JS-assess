@@ -12,14 +12,15 @@ exports.arraysAnswers = {
   },
 
   sum: function(arr) {
-    // arr.reduce(function(acc, val) {
-    //   return acc + val;
-    // }, 0) this works in the console but not in the terminal
-    var total = 0
-    for (i = 0; i < arr.length; i++) {
-      total += arr[i];
-    }
-    return total
+    return arr.reduce(function(acc, val) {
+      return acc + val;
+    }, 0)
+    //this works in the console but not in the terminal
+    // var total = 0
+    // for (i = 0; i < arr.length; i++) {
+    //   total += arr[i];
+    // }
+    // return total
   },
 
   remove: function(arr, item) {
@@ -84,13 +85,27 @@ exports.arraysAnswers = {
   },
 
   duplicates: function(arr) {
-    for(let i = 0; i < arr.length; i++) {
-      
+    //iterate through 'arr' and keep track of each number. If a number occurrs
+    //more than once, increase its count.
+    let obj = arr.reduce(function(array, num) {
+      !array[num]? array[num] = 1 : array[num]++
+      return array
+    }, {})
+    let newArray = []
+    for (var item in obj) {
+      if (obj.hasOwnProperty(item) && obj[item] > 1) {
+        newArray.push(parseInt(item))
+      }
     }
+    return newArray
   },
 
   square: function(arr) {
-
+    let squares = []
+    for(let i = 1; i < arr.length+1; i++) {
+      squares.push(i * i)
+    }
+    return squares
   },
 
   findAllOccurrences: function(arr, target) {
